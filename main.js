@@ -1,4 +1,4 @@
-const drive = () => {
+  const drive = () => {
 $(document).ready(function(){
     d3.select('body')
         .append('div')
@@ -80,7 +80,9 @@ $(document).ready(function(){
             .attr('data-xvalue',d=>d.Year).attr('data-yvalue',d=>new Date(d.Seconds*1000))
             .attr('cx',d=>xScale(d.Year))
             .attr('cy',d=>yScale(new Date(d.Seconds*1000)))
-            .attr('r',5)
+            .attr('r',9.25)
+            .attr('fill','#333')
+            .attr('stroke','#f00')
             .on('mouseover',(d)=>{
                 //add tooltip
                 let tool = document.getElementById('tooltip')
@@ -112,9 +114,6 @@ $(document).ready(function(){
             .attr('style',`transform: translate(${size.legend.x}px,${(size.height/2)-size.margin.y}px) rotate(90deg)`)
     
     
-    
-    
-            
         })
     
     }
